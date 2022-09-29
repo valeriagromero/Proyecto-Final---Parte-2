@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">   
+    <link rel="stylesheet" href="./css/media.css">
+    
+    <title>Proyecto Final</title>
+</head>
+<body>
+
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">                    
+                    <img src="./asset/Imagenes/logo.png" id="logo">  
+                    <p>CUIDADANIA ITALINA</p>                            
+                </div>                
+                <div class="two columns u-pull-right">
+                    <ul>
+                        <li class="submenu">
+                                <img src="./asset/Imagenes/cart.png" id="img-carrito">
+                                <div id="carrito">
+                                        
+                                        <table id="lista-carrito" class="u-full-width">
+                                            <thead>
+                                                <tr>
+                                                    <th>Imagen</th>
+                                                    <th>Nombre</th>
+                                                    <th>Precio</th>
+                                                    <th>Cantidad</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+    
+                                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+        </header>
+    
+        <main>
+    
+        <div class="barra">
+            <div class="container">
+                <div class="row">
+                        <div class="four columns icono icono1">
+                            <p>ClASES DE ITALIANO A1 - C2 <br>
+                            CLASES 100% VIRTUALES BASADO EN TUS NECESIDADES PERSONALES O LABORALES</p>
+                        </div>
+                        <div class="four columns icono icono2">
+                            <p>ARMAMOS TU ARBOL GENIALOGICO <br>
+                            CONTROL DE DOCUMENTACION <br> ENVIOS INTERNACIONALES </p>
+                        </div>
+                        <div class="four columns icono icono3">
+                            <p>BUSCAMOS ACTAS EN TODA ITALIA <br>
+                            BUSCAMOS ACTAS EN ARGENTINA <br> APOSTILLAMOS </p>
+                        </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div id="lista-servicios" class="container">
+            <h1 id="encabezado" class="encabezado">SERVICIOS DISPONIBLES</h1>
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="./asset/Imagenes/PARROQUIALES.png" class="imagen-servicio u-full-width">
+                        <div class="info-card">
+                            <h4>Actas Comunes</h4>
+                            <p>Incluye pedido al Comune</p>                            
+                            <p class="precio">€150  <span class="u-pull-right ">€120</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="./asset/Imagenes/ACTA.png" class="imagen-servicio u-full-width">
+                            <div class="info-card">
+                                <h4>Actas Parroquiales </h4>
+                                <p>Pueden ser actas o Vicarios</p>                                
+                                <p class="precio">€200  <span class="u-pull-right ">€150</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="./asset/Imagenes/curso1.jpg" class="imagen-servicio u-full-width">
+                            <div class="info-card">
+                                <h4>Clases de Italiano</h4>
+                                <p>Precio por 2 hs</p>                                
+                                <p class="precio">€10  <span class="u-pull-right ">€7</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                            </div>
+                        </div> 
+                </div>
+    
+            </div> 
+            
+            <br>
+
+            <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="./asset/Imagenes/PASAPORTE (1).png" class="imagen-servicio u-full-width">
+                        <div class="info-card">
+                            <h4>Ciudadania</h4>
+                            <p>Acompañamiento Virtual</p>                            
+                            <p class="precio">€200  <span class="u-pull-right ">€150</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                        </div>
+                    </div> 
+                </div>                
+            </div>
+        </div>
+    </main>
+     
+    
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+                        <div class="four columns">
+                                <nav id="principal" class="menu">
+                                    <a class="enlace" href="#">¿Quienes Somos?</a>
+                                    <a class="enlace" href="#">Nuestros Servicios</a>                                    
+                                </nav>
+                        </div>
+                        <div class="four columns">
+                                <nav id="secundaria" class="menu">
+                                    <a class="enlace" href="#">Contacto</a>
+                                    <a class="enlace" href="#">Whatsapp</a>
+                                    <a class="enlace" href="#">Intagram</a>
+                                </nav>
+                        </div>
+                </div>
+            </div>
+        </footer>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
