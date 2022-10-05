@@ -19,6 +19,15 @@ function cargarEventListeners() {
 
     vaciarCarrito.addEventListener('click', () => {
         articulosCarrito = [];
+
+        Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Carrito Eliminado',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
         limpiarHTML ();
     });
 
@@ -41,10 +50,29 @@ function agregarServicio(e) {
 
 function eliminarServicio(e) {
     console.log(e.target.classList);
-    if(e.target.classList.contains('borrar-servicio')){
+    if(e.target.classList.contains('borrar-servicio')){  
+        Swal.fire({
+                    title: 'Esta seguro?',
+                    text: `Va a eleminar el producto`,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Eliminar',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {                        
+                        Swal.fire(
+                            'Eliminado!',
+                            'El producto ha sido eliminado',
+                            'success'
+                        )
+                    }
+                })      
         const servicioID = e.target.getAttribute('data-id');
         articulosCarrito = articulosCarrito.filter( servicio => servicio.id !== servicioID);
-
+        
+        
         carritoHTML();
     }
 }
@@ -99,10 +127,19 @@ function carritoHTML() {
                <td>${titulo}</td>
                <td>${precio}</td>
                <td>${cantidad} </td>
+               
                <td>
                     <a href="#" class="borrar-servicio" data-id="${id}">X</a>
                </td>
           `;
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Agregado al carrito',
+            showConfirmButton: false,
+            timer: 1500
+          })
+                      
           contenedorCarrito.appendChild(row);
      
     })    
@@ -129,6 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
     articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carritoHTML();
 })
+
+// agregando Swetalert
+
 
 
 
