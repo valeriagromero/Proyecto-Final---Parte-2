@@ -49,29 +49,10 @@ function agregarServicio(e) {
 // Eliminar algun servicio (por su clase y su ID)
 
 function eliminarServicio(e) {
-    console.log(e.target.classList);
-    if(e.target.classList.contains('borrar-servicio')){  
-        Swal.fire({
-                    title: 'Esta seguro?',
-                    text: `Va a eleminar el producto`,
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Eliminar',
-                    cancelButtonText: 'Cancelar'
-                }).then((result) => {
-                    if (result.isConfirmed) {                        
-                        Swal.fire(
-                            'Eliminado!',
-                            'El producto ha sido eliminado',
-                            'success'
-                        )
-                    }
-                })      
+    
+    if(e.target.classList.contains('borrar-servicio')){         
         const servicioID = e.target.getAttribute('data-id');
-        articulosCarrito = articulosCarrito.filter( servicio => servicio.id !== servicioID);
-        
+        articulosCarrito = articulosCarrito.filter( servicio => servicio.id !== servicioID);       
         
         carritoHTML();
     }
@@ -133,7 +114,7 @@ function carritoHTML() {
                </td>
           `;
             Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
             title: 'Agregado al carrito',
             showConfirmButton: false,
